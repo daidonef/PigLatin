@@ -20,7 +20,7 @@
 	</form>
 </p>
 <p>
-	In Pig Latin it is:<br>
+	${translate}<br>
 	<c:forEach items="${pigLatin}" var="words">
 		${words.replace('-', '')}
 	</c:forEach>
