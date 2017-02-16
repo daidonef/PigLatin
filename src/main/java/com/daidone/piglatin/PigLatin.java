@@ -18,12 +18,15 @@ public class PigLatin {
 		for (int i = 0; i < english.size(); i++) {
 
 			String str1 = english.get(i);
-			if (str1.startsWith("a") || str1.startsWith("e") || str1.startsWith("i") || 
+			
+			if (str1.matches(".*\\d+.*") || CheckingData.checkingSpecialChar(str1)) {
+			
+			} else if (str1.startsWith("a") || str1.startsWith("e") || str1.startsWith("i") || 
 					str1.startsWith("o") || str1.startsWith("u")) {
 
 				english.remove(i);
 				english.add(i, str1 + "way");
-
+				
 			} else {
 
 				english.remove(i);
