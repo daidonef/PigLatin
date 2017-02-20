@@ -25,5 +25,16 @@
 		${words.replace('-', '')}
 	</c:forEach>
 </p>
+<script>
+	function validation() {
+
+		var english = document.forms["pigLatin"]["english"].value;
+	
+		if (english.trim().length === 0) {
+			alert("You need to type in something before we can translate to Pig Latin!");
+			return false;
+		}
+	}
+</script>
 </body>
 </html>
