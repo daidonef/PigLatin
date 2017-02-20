@@ -62,5 +62,24 @@ public class TranslatingData {
 		
 		return endingStr;
 	}
+	
+	public static String pigLatinPunctuation(String startingStr, String endingStr) {
+		
+		if (startingStr.endsWith(".") || startingStr.endsWith("?") || startingStr.endsWith("!")) {
+			
+			char[] charArray = new char [endingStr.length() + 1]; 
+			for (int i = 0; i < endingStr.length(); i++) {
+				charArray[i] = endingStr.charAt(i);
+				if (charArray[i] == '.' || charArray[i] == '?' || charArray[i] == '!') {
+					charArray[i] = '-';
+				}
+			}
+			charArray[endingStr.length()] = startingStr.charAt(startingStr.length() - 1);
+			endingStr = new String(charArray);
+			
+		}
+		
+		return endingStr;
+	}
 
 }

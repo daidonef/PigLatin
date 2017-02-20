@@ -25,7 +25,8 @@ public class PigLatin {
 
 				english.remove(i);
 				String endingStr = startingStr + "way";
-				english.add(i, TranslatingData.pigLatinVowel(startingStr, endingStr));
+				english.add(i, TranslatingData.pigLatinPunctuation(startingStr, 
+						TranslatingData.pigLatinVowel(startingStr, endingStr)));
 
 			} else {
 
@@ -48,7 +49,8 @@ public class PigLatin {
 				
 				String endingStr = new String(charArray).trim() + startingStr.substring(
 						0, count).toLowerCase() + "ay";
-				english.add(i, TranslatingData.pigLatinConsonant(startingStr, endingStr));
+				english.add(i, TranslatingData.pigLatinPunctuation(startingStr, 
+						TranslatingData.pigLatinConsonant(startingStr, endingStr)));
 
 			}
 			
