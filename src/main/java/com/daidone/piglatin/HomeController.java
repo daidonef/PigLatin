@@ -28,8 +28,8 @@ public class HomeController {
 	public String home(Model model, HttpServletRequest request) {
 		
 		if (request.getParameter("english") != null) {
-			model.addAttribute("translate", "In Pig Latin '" +  request.getParameter("english") + 
-				"' translates to:");
+			model.addAttribute("translate", "In Pig Latin<br> '" +  request.getParameter("english") + 
+				"' <br>Translates to:");
 			model.addAttribute("pigLatin", PigLatin.translate(request.getParameter("english")));
 		}
 			

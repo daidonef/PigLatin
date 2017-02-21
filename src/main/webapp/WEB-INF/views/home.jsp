@@ -4,27 +4,28 @@
 <html>
 <head>
 	<title>Home</title>
+	<link rel="stylesheet" href="resources/stylepage.css">
 </head>
 <body>
 <h1>
-	Home  
+	Pig Latin Translator
 </h1>
-<p>
+<div>
 	<form name="pigLatin" onsubmit="return validation()" 
 		action="http://localhost:8080/piglatin/" method="get">
 
 		<br>English to Pig Latin <br>
-		<input type="text" name="english"> 
+		<textarea rows="4" cols="50" class="inside" name="english"> </textarea>
 		<br><br>
-		<input type="submit" value="Translate">
+		<input type="submit" class="inside" value="Translate">
 	</form>
-</p>
-<p>
-	${translate}<br>
+</div>
+<div>
+	${translate}<br><br>
 	<c:forEach items="${pigLatin}" var="words">
 		${words.replace('-', '')}
 	</c:forEach>
-</p>
+</div>
 <script>
 	function validation() {
 

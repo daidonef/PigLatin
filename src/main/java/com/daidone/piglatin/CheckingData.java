@@ -19,6 +19,14 @@ public class CheckingData {
 		
 		char[] charArray = str1.toCharArray();
 		
+		if (str1.length() == 1) {
+			if (Character.isUpperCase(charArray[0])) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		
 		if (Character.isUpperCase(charArray[1])){
 			return true;
 		}
