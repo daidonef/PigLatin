@@ -65,12 +65,14 @@ public class TranslatingData {
 	
 	public static String pigLatinPunctuation(String startingStr, String endingStr) {
 		
-		if (startingStr.endsWith(".") || startingStr.endsWith("?") || startingStr.endsWith("!")) {
+		if (startingStr.endsWith(".") || startingStr.endsWith("?") || startingStr.endsWith("!")
+				|| startingStr.endsWith(",")) {
 			
 			char[] charArray = new char [endingStr.length() + 1]; 
 			for (int i = 0; i < endingStr.length(); i++) {
 				charArray[i] = endingStr.charAt(i);
-				if (charArray[i] == '.' || charArray[i] == '?' || charArray[i] == '!') {
+				if (charArray[i] == '.' || charArray[i] == '?' || charArray[i] == '!' || 
+						charArray[i] == ',') {
 					charArray[i] = '-';
 				}
 			}
